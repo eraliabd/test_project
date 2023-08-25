@@ -57,10 +57,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
-]
-
 # Cross domain list
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
