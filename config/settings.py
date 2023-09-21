@@ -44,10 +44,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'neapolitan',
+    'cloudinary',
 
     'app',
     'billing',
     'products',
+    'cloud_inary',
 ]
 
 MIDDLEWARE = [
@@ -187,3 +190,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STRIPE_PUBLIC_KEY = env.str("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = env.str("STRIPE_SECRET_KEY")
+
+# Cloudinary Connect
+import cloudinary
+import cloudinary.uploader
+import cloudinary.uploader
+cloudinary.config(
+    cloud_name="dekrgpujz",
+    api_key="542338899817443",
+    api_secret="fUOzSXC4kTFuU5FbQb3r7-czpGk"
+)
