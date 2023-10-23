@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><a href="{% url 'product' %}">Home</a></h1>
+<p>
+    Nomi: {{ product.name }} | Narxi: {{ product.price }} so'm |
+    Date: {{ product.created|date:"d-m-Y" }}</p>
+    Last View: {{ product.last_accessed|date:"d-m-Y" }} | {{ product.last_accessed|time:"h:i" }}
+<p>
+    <img src="{{ product.image|safe }}">
+</p>
+</body>
+</html>

@@ -1,6 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.utils.functional import cached_property
+
+User = get_user_model()
 
 
 class Test(models.Model):
@@ -15,4 +17,4 @@ class Test(models.Model):
         return self.number_of_solved * 2
 
     def __str__(self):
-        return self.user.username
+        return self.user.__str__()

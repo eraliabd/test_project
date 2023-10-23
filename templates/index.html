@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for product in products %}
+    <p>Nomi: <a href="{% url 'product_detail' pk=product.id %}">{{ product.name }}</a> | Narxi: {{ product.price }} so'm
+        | Date: {{ product.created|date:"d-m-Y" }} | Last
+        View: {{ product.last_accessed|date:"d-m-Y" }}, {{ product.last_accessed|time:"h:i" }}</p>
+    <p>{{ product.image|safe }}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>
